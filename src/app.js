@@ -15,5 +15,7 @@ setTimeout(function() {
         .onclick = () => {
             document.querySelector("#upperText")
                 .classList.add('revealText')
+            document.querySelector("#upperTextRight")
+                .classList.add('revealText')
         }
 }, 700)
