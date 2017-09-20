@@ -13,11 +13,10 @@
         "webpack-dev-server": "^2.8.2"
     },
     "scripts": {
-        "dev": "webpack-dev-server",
-        "build": "webpack",
+        "dev": "webpack-dev-server --watch",
         "prod": "NODE_ENV=production webpack -p --config webpack.config.babel.js && cp src/index.html dist/index.html"
     },
-    "name": "SevenSignals.io",
+    "name": "Seven Signals.io",
     "version": "1.0.0",
     "main": "src/app.js",
     "license": "MIT"

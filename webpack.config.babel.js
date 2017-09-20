@@ -1,14 +1,19 @@
 import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+// import Dashboard from 'webpack-dashboard'
+// import DashboardPlugin from 'webpack-dashboard/plugin'
 
-const env = process.env.NODE_ENV
+// const dashboard = new Dashboard()
+const devPort = 9000
+const nodeEnv = process.env.NODE_ENV || 'development'
+const isProduction = nodeEnv === 'production'
 
-const cssUse = env === 'production' ? ExtractTextPlugin.extract({
+const cssUse = isProduction ? ExtractTextPlugin.extract({
     fallback: 'style-loader',
     use: ['css-loader']
 }) : ['style-loader', 'css-loader']
 
-const pluginsList = env === 'production' ? [
+const pluginsList = isProduction ? [
     new ExtractTextPlugin({
         filename: '[name].css'
     })
@@ -38,23 +43,27 @@ var config = {
             }
         ]
     },
-    plugins: env === 'production' ? [
-        new ExtractTextPlugin({
-            filename: '[name].css'
-        })
-    ] : [],
+    plugins: pluginsList,
     devServer: {
-        open: true, // to open the local server in browser
+        open: false, // to open the local server in browser
         contentBase: __dirname + '/src',
         compress: true,
-        port: 9000,
-        watchContentBase: true
+        port: devPort,
+        // quiet: true, // important
+        watchContentBase: true,
+        watchOptions: {
+            ignored: /node_modules/
+        },
+        overlay: {
+            warnings: true,
+            errors: true
+        },
     },
     devtool: "eval-source-map" // Default development sourcemap
 };
 
 // Check if build is running in production mode, then change the sourcemap type
-if (env === "production") {
+if (isProduction) {
     config.devtool = "source-map";
 
     // Can do more here
