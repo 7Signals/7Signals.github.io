@@ -58,6 +58,9 @@ var config = {
             warnings: true,
             errors: true
         },
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        }
     },
     devtool: "eval-source-map" // Default development sourcemap
 };

@@ -16,7 +16,7 @@
         "dev": "webpack-dev-server --watch",
         "prod": "NODE_ENV=production webpack -p --config webpack.config.babel.js && cp src/index.html dist/index.html"
     },
-    "name": "Seven Signals.io",
+    "name": "SevenSignals.io",
     "version": "1.0.0",
     "main": "src/app.js",
     "license": "MIT"
