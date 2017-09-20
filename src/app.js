@@ -1,19 +1,20 @@
-import Vivus from 'vivus'
-import css from './app.css'
+import React, {Component} from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-const logo = new Vivus('logo', {
-    type: 'delayed',
-    duration: 100,
-    start: 'manual',
-})
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div className="App-header">
+          <h1>creative thinking with the touch of sarcasm</h1>
+        </div>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+      </div>
+    );
+  }
+}
 
-setTimeout(function() {
-    logo.play(1, function(l) {
-        l.el.classList.add('finished');
-    })
-    document.querySelector("#revealText")
-        .onclick = () => {
-            document.querySelector("#upperText")
-                .classList.add('revealText')
-        }
-}, 700)
+export default App;

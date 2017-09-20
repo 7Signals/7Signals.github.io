@@ -1,23 +1,18 @@
 {
-    "dependencies": {
-        "babel-core": "^6.26.0",
-        "babel-loader": "^7.1.2",
-        "babel-preset-env": "^1.6.0",
-        "babel-preset-es2015": "^6.24.1",
-        "bulma": "^0.5.3",
-        "css-loader": "^0.28.7",
-        "extract-text-webpack-plugin": "^3.0.0",
-        "style-loader": "^0.18.2",
-        "vivus": "^0.4.2",
-        "webpack": "^3.6.0",
-        "webpack-dev-server": "^2.8.2"
-    },
-    "scripts": {
-        "dev": "webpack-dev-server --watch",
-        "prod": "NODE_ENV=production webpack -p --config webpack.config.babel.js && cp src/index.html dist/index.html"
-    },
-    "name": "SevenSignals.io",
-    "version": "1.0.0",
-    "main": "src/app.js",
-    "license": "MIT"
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "material-ui": "next",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.13",
+    "vivus": "^0.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }
