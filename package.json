@@ -1,23 +1,24 @@
 {
-  "name": "app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "flow": "^0.2.3",
-    "material-ui": "next",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.13",
-    "react-svg": "^2.1.21",
-    "tslint": "^5.7.0",
-    "typeface-roboto": "^0.0.35",
-    "typescript": "^2.5.2",
-    "vivus": "^0.4.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "name": "seven-signals-website",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "http://7signals.xyz",
+    "dependencies": {
+        "flow": "^0.2.3",
+        "material-ui": "next",
+        "react": "^15.6.1",
+        "react-dom": "^15.6.1",
+        "react-scripts": "1.0.13",
+        "react-svg": "^2.1.21",
+        "tslint": "^5.7.0",
+        "typeface-roboto": "^0.0.35",
+        "typescript": "^2.5.2",
+        "vivus": "^0.4.2"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
+    }
 }
