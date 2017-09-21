@@ -1,0 +1,17 @@
+version: '3'
+services:
+  7signals-xyz:
+    image: "gcr.io/signals-prod/7signals"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    expose:
+        - "5000"
+    ports:
+      - "5000:5000"
+    volumes:
+        - .:/app
+    environment:
+     - VIRTUAL_HOST=7signals.xyz.dev
+    network_mode: "bridge"
