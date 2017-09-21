@@ -233,7 +233,7 @@ module.exports = {
         "radix": "error",
         "require-jsdoc": "error",
         "rest-spread-spacing": "error",
-        "semi": "error",
+        "semi": ["error", "never"],
         "semi-spacing": "error",
         "sort-imports": "off",
         "sort-vars": "error",
@@ -267,6 +267,7 @@ module.exports = {
             "error",
             "never"
         ],
-        "react/jsx-uses-vars": "error"
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
     }
 };
