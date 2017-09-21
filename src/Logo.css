@@ -1,0 +1,22 @@
+.svg-container {
+    display: inline-block;
+    position: relative;
+    min-height: 80%;
+    width: 80%;
+    /* padding-top: 7%;
+    padding-bottom: 7%; */
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+
+/* LOGO ANIMATION */
+
+#logo-svg-container svg * {
+    fill-opacity: 0;
+    transition: fill-opacity 1s;
+}
+
+#logo-svg-container svg.finished * {
+    fill-opacity: 1;
+}

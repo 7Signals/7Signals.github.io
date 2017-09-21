@@ -1,20 +1,24 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react'
+import Logo from './Logo'
+import './App.css'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h1>creative thinking with the touch of sarcasm</h1>
+      <section className="app is-fullheight">
+        <div className="app-body">
+          <div className="container is-centered has-text-centered">
+            <div className="columns">
+              <div className="column is-6 is-offset-3">
+                <h1 className="title is-2">creative thinking with the touch of sarcasm</h1>
+                <Logo/>
+                <h1 className="title is-2">dont believe me?</h1>
+              </div>
+            </div>
+          </div>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      </section>
+    )
   }
 }
-
-export default App;
+export default App
